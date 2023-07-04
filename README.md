@@ -4,8 +4,6 @@
 This is the repository of my diy portafilter coffee machine IoT project. It's supposed to provide push notifications whether the coffee machine is up to speed - it takes quiet some time to reach the brewing temperature - and tell whether i forgot to switch it off after 2 hours.
 This is also the basis for my next smarthome projects.
 
-It's possibly the first project for the Lelit Mara X using a ESP32 with MicroPython (https://micropython.org/), a bare-metal version of Python for microcontrollers.
-
 
 ## Architecture
 ![Mara_x_home_arch](https://github.com/DanielBrkr/mara_x_home/assets/138571169/9c74989e-e923-45b8-8735-589a38c9557e)
