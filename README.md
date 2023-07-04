@@ -17,7 +17,7 @@ It's possibly the first project for the Lelit Mara X using a ESP32 with MicroPyt
 
 ### Backend (µC and Database)
 
-This is where the MicroPython code for the ESP32 resides "/backend/temp_readout_prototype/" and the regular Python code for the MQTT client, that is dealing with the received temperature readings and pushing them to a database. The MQTT client which subscribes to the topic "coffee" can run either on a PC or Raspberry Pi. 
+This is where the MicroPython code for the ESP32 resides "/backend/temp_readout_prototype/" and the regular Python code for the MQTT host, that is dealing with the received temperature readings and pushing them to a database. The MQTT host which subscribes to the topic "coffee" can run either on a PC or Raspberry Pi. 
 
 ### Frontend (Prototyping)
 
