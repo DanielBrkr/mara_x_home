@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Machine Temperature</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                $.getJSON('/get_temperature', function(data) {
+                    $('#temperature').html(data.temperature);
+                    $('#timestamp').html(data.timestamp);
+                });
+            }, 2000);
+
+            var img = $('<img id="plot" src="">');
+            img.appendTo('#plot-container');
+
+            setInterval(function() {
+                $.getJSON('/get_data', function(data) {
+                    img.attr('src', 'data:image/png;base64,' + data.plot_data);
+                });
+            }, 2000);
+        });
+    </script>
+</head>
+<body>
+    <h1>Coffee Machine Temperature</h1>
+    <div>
+        <h2> Current temperature: <span id="temperature">{{ temperature }}</span></h2>
+    </div>
+    <div>
+        <h2> Timestamp (seconds since boot): <span id="timestamp">{{ timestamp }}</span></h2>
+    </div>
+    <div id="plot-container"></div>
+</body>
+</html>

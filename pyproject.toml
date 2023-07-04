@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "mara-x-home"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Breucker <daniel.b_g@live.de>"]
+readme = "README.md"
+packages = [{include = "mara_x_home"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+blinker = "1.4"
+pyopenssl = "^23.0.0"
+pyserial = "^3.5"
+docopt = "^0.6.2"
+adafruit-ampy = "1.0.5"
+micropython-esp32-stubs = "^1.19.1.post12"
+esptool = "^4.5.1"
+pandas = "*"
+matplotlib = "^3.7.1"
+palettable = "^3.3.0"
+paho-mqtt = "^1.6.1"
+loguru = "^0.7.0"
+reflex = "^0.2.0"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

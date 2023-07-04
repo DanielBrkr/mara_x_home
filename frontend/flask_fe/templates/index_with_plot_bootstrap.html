@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Machine Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Customize the CSS to your liking */
+        body {
+            background-color: #F8F9FA;
+            padding-top: 60px;
+        }
+        .jumbotron {
+            background-color: #FFFFFF;
+            margin-bottom: 0;
+        }
+        #temperature-chart {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Coffee Machine Dashboard</a>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Coffee Machine Temperature</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Current Temperature</h2>
+                    <p class="lead"><span id="temperature">{{ temperature }}</span></p>
+                    <p class="small text-muted">Last updated <span id="timestamp">{{ timestamp }}</span></p>
+                </div>
+                <div class="col-md-8">
+                    <h2>Temperature Chart</h2>
+                    <canvas id="temperature-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('temperature-chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Temperature',
+                    data: [],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        $(document).ready(function() {
+            setInterval(function() {
+                $.getJSON('/get_temperature', function(data) {
+                    $('#temperature').html(data.temperature);
+                    $('#timestamp').html(data.timestamp);
+                    chart.data.labels.push(data.timestamp);
+                    chart.data.datasets[0].data.push(data.temperature);
+                    chart.update();
+                });
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
