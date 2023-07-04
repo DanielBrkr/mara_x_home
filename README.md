@@ -8,7 +8,8 @@ It's possibly the first project for the Lelit Mara X using a ESP32 with MicroPyt
 
 
 ## Architecture
-![Mara_x_home_arch](https://github.com/SmittusWerbus/mara_x_home/assets/67009081/c585e756-d407-47ea-8788-a7eb476b8733)
+![Mara_x_home_arch](https://github.com/DanielBrkr/mara_x_home/assets/138571169/9ffa18e5-79e2-458e-a5c9-2c0ccd2bf803)
+
 
 *RPI 4 = Raspberry Pi 4
 
