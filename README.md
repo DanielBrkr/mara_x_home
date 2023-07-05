@@ -1,7 +1,7 @@
 # mara_x_home
 
 ## Goal
-This is the repository of my diy portafilter coffee machine IoT project. It's supposed to provide push notifications whether the coffee machine is up to speed - it takes quiet some time to reach the brewing temperature - and tell whether i forgot to switch it off after 2 hours.
+This is the repository of my diy portafilter coffee machine IoT project. It's supposed to provide push notifications whether the coffee machine is up to speed - it takes quite some time to reach the brewing temperature - and tell whether i forgot to switch it off after 2 hours.
 This is also the basis for my next smarthome projects.
 
 
