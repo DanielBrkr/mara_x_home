@@ -34,7 +34,7 @@ If you run reflex for the first time you have to init it in the folder of reflex
 \mara_x_home\frontend\reflex_fe> reflex init
 ```
 
-After you did that once, you can run it straight away via "reflex run"
+After you did that once, you can run it straight away via "reflex run":
 
 ```Python
 \mara_x_home\frontend\reflex_fe> reflex run
