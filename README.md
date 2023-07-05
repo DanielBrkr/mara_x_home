@@ -24,6 +24,7 @@ The frontend is, as illustrated by the figure, only optional, but it's quiet con
 
 #### Reflex Frontend
 
+This is what the front facing page looks like, there will be a lot more temperatures to monitor when the ESP32 is actually connected to the coffee machine.
 
 ![grafik](https://github.com/DanielBrkr/mara_x_home/assets/138571169/eba57b2f-66db-4fe3-95a7-dc81cc455139)
 
