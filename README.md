@@ -22,6 +22,24 @@ This is where the MicroPython code for the ESP32 resides "/backend/temp_readout_
 
 The frontend is, as illustrated by the figure, only optional, but it's quiet convenient for prototyping. I've explored two routes, the first one is via a flask server and the second one via the Reflex Framework (https://reflex.dev/), which is a new web app development framework in pure Python. 
 
+#### Reflex Frontend
+
+
+![grafik](https://github.com/DanielBrkr/mara_x_home/assets/138571169/eba57b2f-66db-4fe3-95a7-dc81cc455139)
+
+
+If you run reflex for the first time you have to init it in the folder of reflex, like so:
+
+```Python 
+\mara_x_home\frontend\reflex_fe> reflex init
+```
+
+After you did that once, you can run it straight away via "reflex run"
+
+```Python
+\mara_x_home\frontend\reflex_fe> reflex run
+```
+
 
 ### Next Steps
 
